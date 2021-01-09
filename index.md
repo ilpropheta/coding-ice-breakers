@@ -48,9 +48,9 @@ arr2 = [6, 1, 3]
 answer = 2
 ```
 
-#### Solution
+#### Solutions
 
-**1** Calculate the difference between the sums of both
+- Calculate the difference between the sums of both
 
 Example:
 
@@ -66,7 +66,7 @@ answer = 12 - 10 = 2
 
 Since this solution can lead to integer overflow, the second one is recommended:
 
-**2** Calculate the xor between the xor of both
+- Calculate the xor between the xor of both
 
 Example:
 
@@ -80,7 +80,7 @@ xor2 = 1^6^3 = 4
 answer = 6 ^ 4 = 2
 ```
 
-**3** Sort both and find the first mismatch
+- Sort both and find the first mismatch
 
 Another acceptable solution is to sort both the arrays and then linearly find the first mismatching pair.
 
