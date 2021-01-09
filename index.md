@@ -1,16 +1,16 @@
 ## 1. Reverse the words of a string without allocating extra space
 
-Example:
+✏️ Example:
 
 ```
 today is a sunny day -> day sunny a is today
 ```
 
-### Solution
+### 📝 Solution
 
 Reverse the string blindly, then reverse the single words
 
-Step by step example:
+✏️ Example:
 
 ```
                 today is a sunny day
@@ -21,17 +21,17 @@ reverse words:  day sunny a is today
 
 ## 2. Count the number of digits of the factorial of a big number
 
-Example:
+✏️ Example:
 
 ```
 450! has 1001 digits
 ```
 
-### Solution
+### 📝 Solution
 
 The number of digits is given by `ceiling` the sum of the log10 of numbers from `1` to `N`.
 
-Example:
+✏️ Example:
 
 ```
 450!
@@ -40,7 +40,7 @@ ceil(log10(1) + log10(2) + ... + log10(450)) = 1001
 
 ## 3. Given two arrays of numbers, find the only element which is missing from the second one
 
-Example:
+✏️ Example:
 
 ```
 arr1 = [1, 6, 2, 3]
@@ -48,11 +48,11 @@ arr2 = [6, 1, 3]
 answer = 2
 ```
 
-#### Solutions
+#### 📝 Solutions
 
 - Calculate the difference between the sums of both
 
-Example:
+✏️ Example:
 
 ```
 arr1 = [1, 6, 2, 3]
@@ -68,7 +68,7 @@ Since this solution can lead to integer overflow, the second one is recommended:
 
 - Calculate the xor between the xor of both
 
-Example:
+✏️ Example:
 
 ```
 arr1 = [1, 6, 2, 3]
@@ -84,7 +84,7 @@ answer = 6 ^ 4 = 2
 
 Another acceptable solution is to sort both the arrays and then linearly find the first mismatching pair.
 
-Example:
+✏️ Example:
 
 ```
 arr1 = [1, 6, 2, 3]
