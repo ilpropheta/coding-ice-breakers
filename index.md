@@ -1,7 +1,3 @@
-# Coding ice-breakers
-
-A collection of coding challenges whom solutions can be just explained in words or sketched at the blackboard.
-
 ## 1. Reverse the words of a string without allocating extra space
 
 Example:
