@@ -1,37 +1,102 @@
-## Welcome to GitHub Pages
+# Coding ice-breakers
 
-You can use the [editor on GitHub](https://github.com/ilpropheta/coding-ice-breakers/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+A collection of coding challenges whom solutions can be just explained in words or sketched at the blackboard.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 1. Reverse the words of a string without allocating extra space
 
-### Markdown
+Example:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+today is a sunny day -> day sunny a is today
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Solution
 
-### Jekyll Themes
+Reverse the string blindly, then reverse the single words
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ilpropheta/coding-ice-breakers/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Step by step example:
 
-### Support or Contact
+```
+                today is a sunny day
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+reverse:        yad ynnus a si yadot
+reverse words:  day sunny a is today
+```
+
+## 2. Count the number of digits of the factorial of a big number
+
+Example:
+
+```
+450! has 1001 digits
+```
+
+### Solution
+
+The number of digits is given by `ceiling` the sum of the log10 of numbers from `1` to `N`.
+
+Example:
+
+```
+450!
+ceil(log10(1) + log10(2) + ... + log10(450)) = 1001
+```
+
+## 3. Given two arrays of numbers, find the only element which is missing from the second one
+
+Example:
+
+```
+arr1 = [1, 6, 2, 3]
+arr2 = [6, 1, 3]
+answer = 2
+```
+
+#### Solution
+
+**1** Calculate the difference between the sums of both
+
+Example:
+
+```
+arr1 = [1, 6, 2, 3]
+sum1 = 1+6+2+3 = 12
+
+arr2 = [6, 1, 3]
+sum2 = 1+6+3 = 10
+
+answer = 12 - 10 = 2
+```
+
+Since this solution can lead to integer overflow, the second one is recommended:
+
+**2** Calculate the xor between the xor of both
+
+Example:
+
+```
+arr1 = [1, 6, 2, 3]
+xor1 = 1^6^2^3 = 6
+
+arr2 = [6, 1, 3]
+xor2 = 1^6^3 = 4
+
+answer = 6 ^ 4 = 2
+```
+
+**3** Sort both and find the first mismatch
+
+Another acceptable solution is to sort both the arrays and then linearly find the first mismatching pair.
+
+Example:
+
+```
+arr1 = [1, 6, 2, 3]
+sorted1 = [1, 2, 3, 6]
+
+arr2 = [6, 1, 3]
+sorted2 = [1, 3, 6]
+
+[1, 1] OK
+[2, 3] KO -> answer = 2
+```
