@@ -96,3 +96,43 @@ sorted2 = [1, 3, 6]
 [1, 1] OK
 [2, 3] KO -> answer = 2
 ```
+
+## 4. Find the midpoint of a singly linked-list in a single pass
+
+✏️ Example:
+
+```
+[1] -> [3] -> [7] -> [5] -> [1] -> [\]
+
+answer = [7]
+```
+
+#### 📝 Solution
+
+Move two pointers through the list in tandem, one as twice as fast as the second: we move one pointer a single node at a time and another two nodes at a time. When the first pointer is at node `x`, the second pointer is at position `2x`. When then second node reaches the end of the list, the first pointer is at the midpoint.
+
+✏️ Example:
+
+```
+       [1] -> [3] -> [7] -> [5] -> [1] -> [\]
+        ^
+       ptr1
+       ptr2
+       
+       [1] -> [3] -> [7] -> [5] -> [1] -> [\]
+               ^
+              ptr1    ^
+                     ptr2
+      
+      [1] -> [3] -> [7] -> [5] -> [1] -> [\]
+                      ^
+                    ptr1           ^
+                                  ptr2
+      
+      [1] -> [3] -> [7] -> [5] -> [1] -> [\]
+                      ^
+                    ptr1                  ^
+                                        ptr2  <- STOP
+                                        
+answer = [7]
+```
