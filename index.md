@@ -125,12 +125,12 @@ Move two pointers through the list in tandem, one as twice as fast as the second
                      ptr2
       
       [1] -> [3] -> [7] -> [5] -> [1] -> [\]
-                      ^
+                     ^
                     ptr1           ^
                                   ptr2
       
       [1] -> [3] -> [7] -> [5] -> [1] -> [\]
-                      ^
+                     ^
                     ptr1                  ^
                                         ptr2  <- STOP
                                         
